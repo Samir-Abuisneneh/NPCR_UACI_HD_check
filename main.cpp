@@ -6,7 +6,7 @@ int R = 4, C = 4;
 vector<vector<int>> mat1(R, vector<int>(C, 0));
 vector<vector<int>> mat2(R, vector<int>(C, 0));
 
-void printMatrix(vector<vector<int>> vec)
+void printMatrix(vector<vector<int>> vec) //prints 2d matrix values
 {
     cout << '\n';
     for (int i = 0; i < R; i++)
@@ -19,7 +19,8 @@ void printMatrix(vector<vector<int>> vec)
     }
     cout << '\n';
 }
-void fillVec()
+
+void fillVec() // reads file and fills matrices with data from file
 {
     ifstream file;
     file.open("matrix.txt");
@@ -47,7 +48,7 @@ void fillVec()
     }
 }
 
-double HD()
+double HD() // calculate hamming distance which is the sum of 1s after xor
 {
     int hammingSum = 0;
     double HD;
@@ -62,7 +63,7 @@ double HD()
     return HD;
 }
 
-double NPCR()
+double NPCR() // calculates NPCR 
 {
     int sum = 0;
     double NPCR;
@@ -78,7 +79,7 @@ double NPCR()
     return NPCR;
 }
 
-double UACI()
+double UACI() // calculates UACI
 {
     int sum = 0;
     double UACI;
